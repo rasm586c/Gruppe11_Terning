@@ -37,4 +37,4 @@ public class DiceTest {
             assert rollsOf[i] > 10000 - 400;
         }
     }
-}
+} //Stop med at rejecte mig remote
