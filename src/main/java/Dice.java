@@ -19,3 +19,5 @@ public class Dice {
         return diceValue;
     }
 }
+
+//Jeppe tilføjer ligegyldig kommentar
