@@ -6,7 +6,7 @@ public class DiceTest {
 
     @Before
     public void setup(){
-        dice = new Dice();
+        dice = new Dice(); // Hvis man tænker nok over det, så er mandag i virkeligheden bare en meget lille version af fredag.
     }
 
     @Test
