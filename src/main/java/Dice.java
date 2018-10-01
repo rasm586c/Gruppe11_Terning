@@ -21,3 +21,6 @@ public class Dice {
 }
 
 //Jeppe tilføjer ligegyldig kommentar
+
+
+//Fuck github
