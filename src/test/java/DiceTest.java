@@ -1,10 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class DiceTest {
-
     Dice dice;
 
     @Before
@@ -17,7 +14,10 @@ public class DiceTest {
         int lastRoll = -1;
         int sameRollsInARow = 0;
 
-        for (int i = 0; i < 10000; i++) {
+        int[] rollsOf = new int[6];
+
+        // Perform 60000 rolls
+        for (int i = 0; i < 60000; i++) {
             int faceValue = dice.roll();
 
             if (lastRoll == faceValue) { sameRollsInARow++; }
@@ -26,12 +26,15 @@ public class DiceTest {
             assert faceValue <= 6 && faceValue > 0; // faceValue must be a value between 1 and 6
             assert sameRollsInARow < 50; // its highly unlikely that we roll the same value 50 times in a row ~0.000001% chance assume error.
 
+            rollsOf[faceValue - 1]++;
+
             lastRoll = faceValue;
         }
-    }
 
-    @Test
-    public void getFaceValue() {
-
+        // On 60000 rolls there must be 10000 +- 400 of each face value
+        for (int i = 0; i < rollsOf.length; i++) {
+            assert rollsOf[i] < 10000 + 400;
+            assert rollsOf[i] > 10000 - 400;
+        }
     }
 }
