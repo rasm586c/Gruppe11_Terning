@@ -1,3 +1,8 @@
+/*
+Hele det her projekt tilhører gruppe 11!
+ */
+
+
 import java.util.Scanner;
 
 public class TerningProgram {
