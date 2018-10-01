@@ -4,7 +4,7 @@ public class Dice {
     Random random;
     Dice() {
         random = new Random();
-    }
+    } // Ligegyldig kommentar
 
     // roll the die and return the value (1-6)
     public int roll() {
