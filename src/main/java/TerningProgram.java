@@ -11,3 +11,4 @@ public class TerningProgram {
         keyboard.close();            // Close the scanner
     }
 }
+//Hans var her
